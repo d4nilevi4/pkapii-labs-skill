@@ -26,11 +26,13 @@ When the student begins, the agent tells them briefly, in their language:
 |---|---|
 | `references/vm-apple-silicon.md` | Creating, installing, networking and deleting an ARM Ubuntu VM in VirtualBox on Apple Silicon, with the known hangs and their fixes |
 | `references/working-in-the-vm.md` | How the agent worked with the VM: user and SSH access, running commands, creating files, waiting, taking screenshots, keeping records |
+| `references/report-building.md` | Tools and pitfalls for producing Word and PDF: pandoc, xelatex, python-docx, LaTeX to Word, LibreOffice checks. Tool-level only: no layout, no template |
 | `references/docker-notes.md` | Docker and Compose on an ARM guest: installation, PostgreSQL volumes, networks, healthchecks, proxy errors |
 | `references/kubernetes-notes.md` | kind on ARM, reaching a NodePort from the Mac, `kubectl` pitfalls, a general method for diagnosing a broken deployment |
 | `references/evidence.md` | Recording real command output and rendering terminal screenshots from it |
 | `scripts/vmrun.py`, `scripts/termshot.py` | Run commands in the VM or on the host, save the transcript, render a PNG from it |
 | `scripts/browsershot.sh`, `scripts/adminer_login.mjs` | Screenshots of web pages in headless Chrome, including a page behind a login form |
+| `scripts/check_pdf_overflow.py` | Finds pages where a figure runs into the bottom margin, onto the page number or past the right margin |
 
 The reference files are meant to be read on demand, one per topic.
 
