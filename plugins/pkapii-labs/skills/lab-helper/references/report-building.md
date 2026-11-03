@@ -73,3 +73,4 @@ python3 scripts/check_pdf_overflow.py report.pdf --bottom <cm> --right <cm>
 - Rebuild after every edit to the source and rerun the checks.
 - Keep a copy of every deliverable in a separate folder after each rebuild, so an old version is never sent by mistake.
 - Keep personal data (name, group) in one place of the build script or in the sample, so it can be replaced in one step.
+- Report prose reads better after a pass with the separate `/humanizer` skill, which removes typical signs of machine-written text. It is not part of this repository and is installed on its own.
