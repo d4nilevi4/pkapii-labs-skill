@@ -2,7 +2,7 @@
   "name": "pkapii-labs-skill",
   "description": "Field notes for Docker, Compose and Kubernetes (kind) labs in a VM on an Apple Silicon Mac",
   "owner": {
-    "name": "pkapii-labs-skill contributors"
+    "name": "d4nilevi4"
   },
   "plugins": [
     {

@@ -13,16 +13,16 @@ python3 scripts/vmrun.py 01_versions --cwd '~/project' "docker --version" "docke
 
 - One call = one figure. Name it by number and meaning (`07_compose_up`). The `.txt` next to the `.png` is the proof.
 - Stderr is merged into stdout, so the order is the one a real terminal shows.
-- The image is **rendered from a transcript, not a screen capture.** Say so in the report. Real screen captures: VM console `VBoxManage controlvm <vm> screenshotpng f.png`; web pages `chrome --headless=new --screenshot=f.png --window-size=1100,640 <url>`.
-- Host screen capture (`screencapture`) needs the user to grant Screen Recording permission to the terminal/app. If it is not granted, do not work around it; use the methods above or ask the user to take those shots.
+- The image is **rendered from a transcript, not a screen capture**, and the report stated that. Real screen captures: VM console `VBoxManage controlvm <vm> screenshotpng f.png`; web pages `chrome --headless=new --screenshot=f.png --window-size=1100,640 <url>`.
+- Host screen capture (`screencapture`) needs the user to grant Screen Recording permission to the terminal/app. If it is not granted, the methods above replace it, or the user takes those shots.
 
-## Rules
+## What worked
 
-- A command that changes state is run once with its final form. Test syntax separately first; do not pipe it into `head`.
-- If something was done without a recorded output (a silent command), the report must say it, not imply a figure exists.
-- Check the output before using it: old pods in a list, duplicate figures (`md5 a.png b.png`), a figure that does not prove its caption (for example a "via proxy" screenshot taken on a different port).
-- Keep prompts honest: the working directory shown must match where the command ran.
-- Tall screenshots: split by lines or keep commands short, so each figure fits one page. Check that nothing overlaps page numbers or margins in the final document, whatever tool produced it.
-- Keep a timestamped problem log (time, type, what happened, cause, fix). Log failures too; they are useful and honest.
-- Web UIs behind a login form (such as Adminer): automate a real login through headless Chrome (DevTools protocol) instead of faking a request.
-- Diagrams drawn by hand or code are not screenshots; label them as diagrams.
+- A state-changing command ran once, in its final form; its syntax was tested separately first, and it was never piped into `head`.
+- When something was done without a recorded output (a silent command), the report said so instead of implying a figure exists.
+- Output was checked before use: old pods in a list, duplicate figures (`md5 a.png b.png`), a figure that does not prove its caption (for example a "via proxy" screenshot taken on a different port).
+- The prompt in an image matched where the command really ran (working directory).
+- Tall screenshots were split by lines or commands kept short, so each figure fit one page, and the final document was checked for overlaps with page numbers and margins.
+- A timestamped problem log (time, type, what happened, cause, fix) included failures as well as successes.
+- Web UIs behind a login form (such as Adminer) were screenshotted through a real login in headless Chrome (DevTools protocol), not through a faked request.
+- Hand-drawn or code-drawn diagrams were labeled as diagrams, not screenshots.

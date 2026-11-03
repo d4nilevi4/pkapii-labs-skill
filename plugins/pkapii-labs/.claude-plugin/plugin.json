@@ -2,5 +2,8 @@
   "name": "pkapii-labs",
   "description": "Lab helper skill: VM setup on Apple Silicon, Docker/Compose/kind pitfalls, real evidence capture. No assignments, no report template.",
   "version": "0.1.0",
-  "license": "MIT"
+  "license": "MIT",
+  "author": {
+    "name": "d4nilevi4"
+  }
 }
