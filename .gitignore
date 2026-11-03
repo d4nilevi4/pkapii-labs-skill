@@ -1,0 +1,20 @@
+# Assignment materials are copyrighted and must never be committed.
+*.docx
+*.doc
+*.odt
+*.pdf
+*.pptx
+# Large or private lab artifacts
+*.iso
+*.vdi
+*.mp4
+*.mp3
+*.png
+vm/
+vms/
+evidence/
+work/
+notes/
+lectures/
+.DS_Store
+__pycache__/
