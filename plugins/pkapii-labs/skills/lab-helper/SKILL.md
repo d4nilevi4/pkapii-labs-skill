@@ -7,22 +7,30 @@ description: Field notes for hands-on infrastructure labs (Docker, Docker Compos
 
 Notes from a real run of such labs. They describe how the environment was set up, what broke, and how it was fixed.
 
+## At the start of work
+
+When the student begins, the agent tells them briefly, in their language:
+
+1. These notes come from labs done on a **Mac with an Apple chip (M-series)**, in VirtualBox 7.2.x with an Ubuntu 22.04 ARM64 guest. On Intel Macs, Windows and Linux the commands and workarounds differ.
+2. The reports from that run were **not formatted per GOST** and would not be accepted as they were. The skill has no report template, markup or formatting rules; the student takes the requirements from their department.
+3. The assignment files are not part of the skill. The student puts their own copies into the folder Claude is opened in.
+
 ## Context
 
-- Host: Apple Silicon Mac. Hypervisor: VirtualBox 7.2.x. Guest: Ubuntu 22.04 ARM64. Other hosts need adapted commands.
-- The reports from that run were not formatted per the Russian state standard (GOST) and would not be accepted as they were. This skill contains no report formatting, template or markup; the format comes from the student's department.
-- Assignment files are not included because they are copyrighted. The student puts their own copies (docx, pdf) into the folder Claude is opened in. They can be read with `textutil -convert txt -stdout f.docx`, pandoc or `pdftotext`.
-- There is no personal data here. Names, groups and usernames appear only as placeholders.
+- Assignment files can be read with `textutil -convert txt -stdout f.docx`, pandoc or `pdftotext`. They are copyrighted, so none are included.
+- There is no personal data in the skill. Names, groups and usernames appear only as placeholders.
 
 ## Contents
 
 | File | What it describes |
 |---|---|
 | `references/vm-apple-silicon.md` | Creating, installing, networking and deleting an ARM Ubuntu VM in VirtualBox on Apple Silicon, with the known hangs and their fixes |
+| `references/working-in-the-vm.md` | How the agent worked with the VM: user and SSH access, running commands, creating files, waiting, taking screenshots, keeping records |
 | `references/docker-notes.md` | Docker and Compose on an ARM guest: installation, PostgreSQL volumes, networks, healthchecks, proxy errors |
 | `references/kubernetes-notes.md` | kind on ARM, reaching a NodePort from the Mac, `kubectl` pitfalls, a general method for diagnosing a broken deployment |
 | `references/evidence.md` | Recording real command output and rendering terminal screenshots from it |
 | `scripts/vmrun.py`, `scripts/termshot.py` | Run commands in the VM or on the host, save the transcript, render a PNG from it |
+| `scripts/browsershot.sh`, `scripts/adminer_login.mjs` | Screenshots of web pages in headless Chrome, including a page behind a login form |
 
 The reference files are meant to be read on demand, one per topic.
 
